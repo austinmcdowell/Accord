@@ -1,2 +1,31 @@
-<h1>Dash</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div class="container-fluid dashboard">
+    <div class="row">
+        <div class="col-lg-1 rooms view-height">
+            <%= render 'layouts/dash_nav' %>
+        </div>
+        <div class="col-lg-2 current-room view-height">
+            <div class="row">
+                <div class="room-title">
+                    <h6 align="center"><%= @user.username %>'s room</h6>
+                </div>
+            </div>
+            <div class="row all-channels">
+                <div class="channels">
+                    <p class="channel-header">TEXT CHANNELS</P>
+                    <p class="channel active">#general</p>
+                </div>
+
+                <div class="channels">
+                    <p class="channel-header">VOICE CHANNELS</P>
+                    <p class="channel">#general</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 room-chat view-height"">
+            <h2 align="center">Welcome to the #general channel in <%= @user.username %>'s room.</h2> 
+            <p align="center">This is the beginning of the channel message history.</p>
+        </div>
+        <div class="col-lg-2 room-patrons view-height"></div>
+    </div>
+</div>
+

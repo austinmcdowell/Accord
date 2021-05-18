@@ -1,3 +1,87 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.dashboard {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Noto Sans JP' !important;
+        color: white !important;
+    }
+}
+
+.rooms {
+    padding: 10px;
+
+    background-color: rgb(34, 34, 34);
+    color: white !important;
+}
+
+.current-room {
+    padding: 10px;
+
+    background-color: rgb(48, 48, 48);
+
+    .room-title {
+        height: 40px;
+    }
+
+    .all-channels {
+        padding: 0 5px;
+    }
+
+    .channels {
+        margin: 15px 0;
+    }
+
+    .channel-header {
+        margin: 0 0 5px 0;
+        font-size: 12px;
+    }
+
+    .channel {
+        padding: 5px;
+        
+        font-size: 14px;
+
+        cursor: pointer;
+    }
+
+    .channel:hover {
+        color: white !important;
+        background: rgb(129, 129, 129);
+
+        border-radius: 5px;
+    }
+
+    .active {
+        color: white !important;
+        background: rgb(129, 129, 129);
+
+        border-radius: 5px;
+    }
+
+    p {
+        color: rgb(156, 156, 156);
+    }
+}
+
+.room-chat {
+    padding: 10px 20px;
+
+    background-color: rgb(66, 66, 66);
+
+    h2 {
+        width: 70%;
+        margin: 20px 0 10px 15%;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+.room-patrons {
+    padding: 10px;
+
+    background-color: rgb(48, 48, 48);
+}
