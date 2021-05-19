@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_17_222455) do
+ActiveRecord::Schema.define(version: 2021_05_19_203342) do
+
+  create_table "channels", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "room_id"
+    t.string "name"
+    t.index ["room_id"], name: "index_channels_on_room_id"
+  end
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
@@ -18,6 +26,8 @@ ActiveRecord::Schema.define(version: 2021_05_17_222455) do
     t.integer "room_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "channel_id"
+    t.index ["channel_id"], name: "index_messages_on_channel_id"
     t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
@@ -26,6 +36,8 @@ ActiveRecord::Schema.define(version: 2021_05_17_222455) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

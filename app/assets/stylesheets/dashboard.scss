@@ -10,19 +10,25 @@
 }
 
 .rooms {
+
+}
+
+.rooms-links {
     padding: 10px;
 
     background-color: rgb(34, 34, 34);
     color: white !important;
 }
 
-.current-room {
+.room-channels {
     padding: 10px;
 
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(47, 47, 51);
 
     .room-title {
-        height: 40px;
+        height: 35px;
+
+        // border: 0 0 2px 0 black;
     }
 
     .all-channels {
@@ -40,7 +46,8 @@
 
     .channel {
         padding: 5px;
-        
+        margin: 5px 0;
+
         font-size: 14px;
 
         cursor: pointer;
@@ -48,14 +55,14 @@
 
     .channel:hover {
         color: white !important;
-        background: rgb(129, 129, 129);
+        background: rgba(129, 129, 129, .4);
 
         border-radius: 5px;
     }
 
     .active {
         color: white !important;
-        background: rgb(129, 129, 129);
+        background: rgba(129, 129, 129, .4);
 
         border-radius: 5px;
     }
@@ -65,10 +72,23 @@
     }
 }
 
-.room-chat {
-    padding: 10px 20px;
+.room {
+    background-color: rgb(63, 65, 70);
 
-    background-color: rgb(66, 66, 66);
+    .room-settings {
+        height: 35px;
+        margin: 10px 0 0 0;
+
+        // box-shadow: 0 2px 0px 0px #777;
+    }
+
+    h6 {
+        
+    }
+}
+
+.room-chat {
+    padding: 10px 5px;
 
     h2 {
         width: 70%;
@@ -76,12 +96,30 @@
     }
 
     p {
-        color: white;
+        margin: 0;
+
+        color: rgb(199, 199, 199);
+    }
+
+    .messages {
+        margin: 80px 0 0 0;
+    }
+
+    .message {
+        margin: 3px 0;
+        padding: 6px 12px;
+    }
+
+    .message:hover {
+        background-color: rgb(57, 59, 65);
+
+        border-radius: 3px;
+        cursor: pointer;
     }
 }
 
 .room-patrons {
     padding: 10px;
 
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(47, 47, 51);
 }

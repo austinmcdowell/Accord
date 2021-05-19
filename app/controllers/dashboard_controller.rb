@@ -1,5 +1,8 @@
 class DashboardController < ApplicationController
   def index
-    @user = User.first
+    @user = current_user
+    @rooms = @user.rooms
+    @channels = @rooms.first.channels
+    @messages = @channels.first.messages
   end
 end
