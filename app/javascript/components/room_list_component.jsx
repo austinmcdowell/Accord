@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RoomListComponent = () => {
     return (
-        <div class="col-lg-2 rooms-links view-height">
+        <div className="col-lg-1 rooms-links view-height">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                <li><Link to="/1">Austin</Link></li>
+                <li><Link to="/2">Emily</Link></li>
+                <li><Link to="/3">Teej</Link></li>
             </ul>
         </div>
     );

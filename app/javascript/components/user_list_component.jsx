@@ -3,7 +3,7 @@ import MessagesComponent from './messages_component';
 
 const ChannelComponent = () => {
     return (
-        <div class="col-lg-3 room-patrons view-height"></div>
+        <div className="col-lg-3 room-patrons view-height"></div>
     );
 };
 

@@ -5,10 +5,10 @@ import UserListComponent from './user_list_component';
 const ChannelComponent = () => {
     return (
         <Fragment>
-            <div class="row room-settings">
+            <div className="row room-settings">
                 <h6>#general</h6>
             </div>
-            <div class="row">
+            <div className="row">
                 <MessagesComponent />
                 <UserListComponent />
             </div>

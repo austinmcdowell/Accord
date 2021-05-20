@@ -3,6 +3,7 @@
 // of the page.
 
 import React, { Fragment } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import ContainerComponent from '../components/container_component'
 
 
@@ -10,9 +11,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 const Application = props => (
-  <Fragment>
-    <ContainerComponent />
-  </Fragment>
+  <ContainerComponent />
 )
 
 // Hello.defaultProps = {

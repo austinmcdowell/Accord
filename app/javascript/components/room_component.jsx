@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ChannelListComponent from './channel_list_component';
+import ChannelComponent from './channel_component';
 
-const RoomComponent = () => {
+const RoomComponent = (props) => {
     return (
-        <div class="col-lg-10 room-channels view-height">
-            <div class="row">
-                <div class="room-title">
-                    <h6>austin's room</h6>
+        <Fragment>
+            <div className="col-lg-2 room-channels view-height">
+                <div className="row">
+                    <div className="room-title">
+                        <h6>{props.name}'s room</h6>
+                    </div>
                 </div>
+                <ChannelListComponent />
             </div>
-            <ChannelListComponent />
-        </div>
+            <div className="col-lg-9 room">
+                <ChannelComponent />
+            </div>
+        </Fragment>
+        
+        
     );
 };
 
