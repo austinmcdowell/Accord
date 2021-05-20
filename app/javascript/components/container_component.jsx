@@ -9,10 +9,10 @@ const ContainerComponent = () => {
         <div className="dashboard">
             <div className="row">
                 <div className="col-lg-12 rooms">
-                    <div className="row">
+                    <div className="row no-margin">
                         <Router>
                             <RoomListComponent />
-                            <Switch>
+                            <Switch path="1">
                                 <Route path="/1">
                                     <RoomComponent name="austin"/>
                                 </Route>
@@ -23,6 +23,7 @@ const ContainerComponent = () => {
                                     <RoomComponent name="teej"/>
                                 </Route>
                             </Switch>
+                            <RoomComponent name="austin"/>
                         </Router>
                     </div>                        
                 </div>

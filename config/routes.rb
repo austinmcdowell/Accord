@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :messages
-  devise_for :users
-  # resources :rooms, only: [:]
   root 'dashboard#index'
-  get 'spec/index'
+
+  resources :messages
+  resources :spec, only: [:index]
+  
+  devise_for :users
+
+  #get '/{:value}' => '/{component}/{component}'
+
+  # resources :rooms, only: [:]
 end

@@ -7,6 +7,10 @@ class DashboardController < ApplicationController
   end
 
   def set_user 
-    @user = current_user
+    if user_signed_in?
+      @user = current_user
+    else
+      redirect_to new_user_session_path
+    end
   end
 end

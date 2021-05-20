@@ -4,11 +4,21 @@ import { Link } from 'react-router-dom';
 const RoomListComponent = () => {
     return (
         <div className="col-lg-1 rooms-links view-height">
-            <ul>
-                <li><Link to="/1">Austin</Link></li>
-                <li><Link to="/2">Emily</Link></li>
-                <li><Link to="/3">Teej</Link></li>
-            </ul>
+            <div className="row">
+                <Link to="/1">
+                    <div className="room-button">A</div>
+                </Link>
+            </div>
+            <div className="row">
+                <Link to="/2">
+                    <div className="room-button">E</div>
+                </Link>
+            </div>
+            <div className="row">
+                <Link to="/3">
+                    <div className="room-button">T</div>
+                </Link>
+            </div>
         </div>
     );
 };
