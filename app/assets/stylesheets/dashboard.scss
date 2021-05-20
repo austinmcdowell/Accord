@@ -89,6 +89,7 @@
 
 .room-chat {
     padding: 10px 5px;
+    overflow: scroll !important;
 
     h2 {
         width: 70%;
@@ -103,6 +104,7 @@
 
     .messages {
         margin: 80px 0 0 0;
+
     }
 
     .message {

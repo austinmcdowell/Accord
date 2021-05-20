@@ -8,13 +8,13 @@
                 <div class="col-lg-10 room-channels view-height">
                     <div class="row">
                         <div class="room-title">
-                            <h6 align="center"><%= @user.username %>'s room</h6>
+                            <h6><%= @user.username %>'s room</h6>
                         </div>
                     </div>
                     <div class="row all-channels">
                         <div class="channels">
                             <p class="channel-header">TEXT CHANNELS</P>
-                            <%= @rooms.first.channels.each do |channel| %>
+                            <% @rooms.first.channels.each do |channel| %>
                                 <p class="channel ">#<%= channel.name %></p> 
                             <% end %>
                         </div>
@@ -38,21 +38,9 @@
                     <p align="center">This is the beginning of the channel chat history.</p>
 
                     <div class="messages">
-                        <%# <div class="message">
-                            <h6><b>Austin</b></h6>
-                            <p>Test</p>
-                        </div>
-                        <div class="message">
-                            <h6><b>Austin</b></h6>
-                            <p>This is another test.</p>
-                        </div>
-                        <div class="message">
-                            <h6><b>Teej</b></h6>
-                            <p>This is a third or so test.</p>
-                        </div> %>
-                        <%= @messages.each do |message| %>
+                        <% @messages.each do |message| %>
                             <div class="message">
-                                <h6><b><%= @user.username %></b></h6>
+                                <h6><b><%= message.user.username %></b></h6>
                                 <p class="channel "><%= message.content %></p> 
                             </div>
                         <% end %>
